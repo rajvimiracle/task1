@@ -1,28 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:task1/second%20page.dart';
 
 
-class firstScrren extends StatefulWidget {
-  const firstScrren({super.key});
+class secondScrren extends StatefulWidget {
+  const secondScrren({super.key});
 
   @override
-  State<firstScrren> createState() => _firstScrrenState();
+  State<secondScrren> createState() => _secondScrrenState();
 }
 
-class _firstScrrenState extends State<firstScrren> {
+class _secondScrrenState extends State<secondScrren> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(padding: EdgeInsets.all(5.w),
+        child: Container(
+          padding: EdgeInsets.all(5.w),
           child: Stack(
             alignment: Alignment.bottomCenter,
             children: [
-              // Image(image: AssetImage('assets/images/background1.png',))
               Image.asset(
-                'assets/images/background1.png',
+                'assets/images/background.png',
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
@@ -46,17 +45,14 @@ class _firstScrrenState extends State<firstScrren> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // // SizedBox(
-                              //   height: 3.h,
-                              // ),
                               Center(
                                 child: Text(
-                                  "   Book your next"
+                                  "Find trusted businesses"
                                       "\n"
-                                      "appointment easily",
+                                      "           in your area",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 22.sp,
+                                    fontSize: 20.sp,
                                   ),
                                   maxLines: 2,
                                 ),
@@ -72,8 +68,8 @@ class _firstScrrenState extends State<firstScrren> {
                                     style: TextStyle(fontSize: 15.sp),
                                   )),
                               Center(
-                                  child: Text("quis, consequat eros.",
-                                      style: TextStyle(fontSize:15.sp))),
+                                  child: Text("quis, consequat erosulvinar.",
+                                      style: TextStyle(fontSize: 15.sp))),
                               SizedBox(
                                 height: 5.h,
                               ),
@@ -87,10 +83,14 @@ class _firstScrrenState extends State<firstScrren> {
                                 },
                                 child: Text(
                                   "Next",
-                                  style: TextStyle(color: Colors.white,fontSize: 15.sp,fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 style: ButtonStyle(
-                                  fixedSize: MaterialStateProperty.all(Size(100.w, 7.h)),
+                                  fixedSize: MaterialStateProperty.all(
+                                      Size(100.w, 7.h)),
                                   backgroundColor:
                                   MaterialStateProperty.all(Colors.black),
                                   shape: MaterialStateProperty.all(
@@ -106,7 +106,15 @@ class _firstScrrenState extends State<firstScrren> {
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
-                        child: Container(margin: EdgeInsets.only(bottom: 35.h,),child: Image.asset('assets/images/logo.png',height: 110,width: 110,)),
+                        child: Container(
+                            margin: EdgeInsets.only(
+                              bottom: 35.h,
+                            ),
+                            child: Image.asset(
+                              'assets/images/logo.png',
+                              height: 110,
+                              width: 110,
+                            )),
                       ),
                     ],
                   ),
