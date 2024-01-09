@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:task1/apicall/todosapi/apicall.dart';
 
 import 'route/route/routes.dart';
 import 'route/route/screen.dart';
@@ -14,16 +15,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
-        return GetMaterialApp(
+        return MaterialApp(
           title: 'Responsive Sizer Example',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          initialRoute: Routes.loginPage,
-          getPages: Screens.routes,
+          home: ApiCall(),
+          // initialRoute: Routes.loginPage,
+          // getPages: Screens.routes,
         );
-      },
-      maxTabletWidth: 900, // Optional
+      }, // Optional
     );
   }
 }
