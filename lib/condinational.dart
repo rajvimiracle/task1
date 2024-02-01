@@ -1,3 +1,4 @@
+/*
 main(){
   var a = 500;
   var b = 50;
@@ -27,4 +28,4 @@ main(){
 // //all counds are flase
 //     print("Block4 ELSE");
 //   }
-}
+}*/

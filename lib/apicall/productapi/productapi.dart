@@ -37,7 +37,7 @@ class _ProductApiState extends State<ProductApi> {
         });
       }
     }catch(e){
-    }
+     }
   }
 
 
@@ -47,24 +47,19 @@ class _ProductApiState extends State<ProductApi> {
       appBar: AppBar(
         title: Text("TodosApi"),
       ),
-      body: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2
-          ),
-          itemCount: products.length,
+      body: ListView.builder(
+        itemCount: products.length,
           itemBuilder: (context, index) {
             return Container(
-              child: GridView.count(
-                crossAxisCount: 2,
-                shrinkWrap: true,
-                children: [
-                  
-                ],
+              child: ListTile(
+                leading: Image.network("https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"),
+                title: Text(products[index].title.toString()),
+                subtitle: Text(products[index].description.toString()),
+
+
               ),
             );
-
-          },),
-
+          },)
     );
   }
 }

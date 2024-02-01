@@ -66,10 +66,6 @@ class _ApiCallState extends State<ApiCall> {
     );
   }
 }
-// To parse this JSON data, do
-//
-//     final temperatures = temperaturesFromJson(jsonString);
-
 
 
 
