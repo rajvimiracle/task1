@@ -6,7 +6,6 @@ import 'package:task1/second%20page.dart';
 
 class firstScrren extends StatefulWidget {
   const firstScrren({super.key});
-
   @override
   State<firstScrren> createState() => _firstScrrenState();
 }

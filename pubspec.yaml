@@ -48,10 +48,15 @@ dependencies:
   #flutter_geocoder: ^0.2.2-nullsafety
   url_launcher: ^6.2.4
   google_maps_flutter: ^2.5.3
+  flutter_geocoder: ^0.2.2-nullsafety
+  geocoding: ^2.1.1
+  glassmorphism_ui:
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 
   # The "flutter_lints" package below contains a set of recommended lints to

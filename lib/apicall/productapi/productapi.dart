@@ -29,7 +29,6 @@ class _ProductApiState extends State<ProductApi> {
       print("response ${response.body}");
       Map<String,dynamic> jsondata = jsonDecode(response.body);
       print("jsondata ${jsondata}");
-
       if(response.statusCode == 200){
         List data = jsondata['products'];
         products = data.map((e) => ProductModel.fromJson(e)).toList();
@@ -45,7 +44,7 @@ class _ProductApiState extends State<ProductApi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("TodosApi"),
+        title: Text("Product APi"),
       ),
       body: ListView.builder(
         itemCount: products.length,
@@ -55,8 +54,6 @@ class _ProductApiState extends State<ProductApi> {
                 leading: Image.network("https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"),
                 title: Text(products[index].title.toString()),
                 subtitle: Text(products[index].description.toString()),
-
-
               ),
             );
           },)

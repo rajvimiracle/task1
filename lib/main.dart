@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:task1/FetchLocation.dart';
+import 'package:task1/HomePage.dart';
 import 'package:task1/OpenseaApi.dart';
 import 'package:task1/SimpleMap.dart';
 import 'package:task1/UrlLuncher.dart';
 import 'package:task1/api/MapIntegration/Home_Screen.dart';
 import 'package:task1/api/TodosApi.dart';
+import 'package:task1/api/cartspi/CartsApi.dart';
 import 'package:task1/api/commentsapi/CommentsApi.dart';
 import 'package:task1/apicall/productapi/productapi.dart';
 import 'package:task1/apicall/todosapi/apicall.dart';
+import 'package:task1/conitaner/glassmorphismconitner.dart';
+
 
 import 'route/route/routes.dart';
 import 'route/route/screen.dart';
@@ -25,11 +29,13 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Responsive Sizer Example',
           theme: ThemeData(
+
             primarySwatch: Colors.blue,
           ),
-          home: Home_Screen(),
+          home: GlassMorphism(),
           // initialRoute: Routes.loginPage,
           // getPages: Screens.routes,
         );

@@ -55,7 +55,6 @@ class TodosApi extends GetView<TodosController> {
   }
 }
 */
-
 /*  body: c.obx((todos) =>
           ListView.builder(
             itemCount: todos.length,
